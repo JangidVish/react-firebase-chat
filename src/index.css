@@ -24,7 +24,14 @@ body {
   background-color: rgba(0, 0, 0, 0.734);
   border-radius: 12px;
   backdrop-filter: blur(19px) saturate(180%);
-  border: 1px solid rgba(0, 0, 0, 0.856); 
+  border: 1px solid rgba(0, 0, 0, 0.856);
   display: flex;
   flex-direction: row;
+}
+
+.loading {
+  padding: 50px;
+  font-size: 36px;
+  border-radius: 10px;
+  background-color: rgba(17, 25, 40, 0.9);
 }
