@@ -1,10 +1,15 @@
 import "./chat.css"
 import EmojiPicker from "emoji-picker-react"
-import {useState} from "react"
+import {useEffect, useRef, useState} from "react"
 
 const Chat = () => {
   const [open, setOpen] = useState(false)
   const [text, setText] = useState("")
+  const endRef = useRef(null);
+
+  useEffect(()=>{
+    endRef.current?.scrollIntoView({behavior: "smooth"})
+  })
 
 
   const handleEmoji=(e)=>{
@@ -27,7 +32,39 @@ const Chat = () => {
 
         </div>
       </div>
-      <div className="center"></div>
+      <div className="center">
+        <div className="message">
+          <img src="/avatar.png" alt="" />
+          <div className="texts">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A, dignissimos quod ad, quas praesentium magnam deserunt qui tempore ex, est laudantium nisi cum repellat. Deserunt, saepe architecto. Dignissimos, porro quis.</p>
+            <span>1 min ago</span>
+          </div>
+        </div>
+
+        <div className="message own">
+          <div className="texts">
+            <img src="https://images.unsplash.com/photo-1725552397312-3d8ae9177bcf?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw2fHx8ZW58MHx8fHx8" alt="" />
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A, dignissimos quod ad, quas praesentium magnam deserunt qui tempore ex, est laudantium nisi cum repellat. Deserunt, saepe architecto. Dignissimos, porro quis.</p>
+            <span>1 min ago</span>
+          </div>
+        </div>
+
+        <div className="message">
+          <img src="/avatar.png" alt="" />
+          <div className="texts">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A, dignissimos quod ad, quas praesentium magnam deserunt qui tempore ex, est laudantium nisi cum repellat. Deserunt, saepe architecto. Dignissimos, porro quis.</p>
+            <span>1 min ago</span>
+          </div>
+        </div>
+
+        <div className="message own">
+          <div className="texts">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A, dignissimos quod ad, quas praesentium magnam deserunt qui tempore ex, est laudantium nisi cum repellat. Deserunt, saepe architecto. Dignissimos, porro quis.</p>
+            <span>1 min ago</span>
+          </div>
+        </div>
+        <div className="" ref={endRef}></div>
+      </div>
       <div className="bottom">
         <div className="icons">
           <img src="./img.png" alt=""  />
