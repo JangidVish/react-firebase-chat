@@ -19,10 +19,10 @@ body {
 }
 
 .container {
-  width: 90vw;
-  height: 90vh;
+  width: 100vw;
+  height: 100vh;
   background-color: rgba(0, 0, 0, 0.734);
-  border-radius: 12px;
+  /* border-radius: 12px; */
   backdrop-filter: blur(19px) saturate(180%);
   border: 1px solid rgba(0, 0, 0, 0.856);
   display: flex;
